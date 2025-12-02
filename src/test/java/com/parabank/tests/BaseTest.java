@@ -5,6 +5,8 @@ import io.cucumber.java.Scenario;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.BrowserContext;
 import com.parabank.core.BaseFactory;
+import com.parabank.utils.Utilities;
+
 import io.qameta.allure.Allure;
 
 import java.io.ByteArrayInputStream;
@@ -19,8 +21,9 @@ public class BaseTest {
     public void tearDown(Scenario scenario) {
         Page page = BaseFactory.getPage();
         BrowserContext context = BaseFactory.getContext();
+        String timeStampForCapture = Utilities.generateTimestamp("yyyyMMddHHmmss");
 
-        Path screenshotPath = Paths.get("target/screenshots", scenario.getName() + ".png");
+        Path screenshotPath = Paths.get("target/screenshots", scenario.getName() + timeStampForCapture + ".png");
         try {
 			Files.createDirectories(screenshotPath.getParent());
 			byte[] screenshot = page.screenshot(new Page.ScreenshotOptions().setFullPage(true));
@@ -40,7 +43,7 @@ public class BaseTest {
         context.close();
         if (videoPath != null && Files.exists(videoPath)) {
             try {
-                Path targetPath = Paths.get("target/videos", scenario.getName() + ".webm");
+                Path targetPath = Paths.get("target/videos", scenario.getName() + timeStampForCapture + ".webm");
                 Files.createDirectories(targetPath.getParent());
                 Files.move(videoPath, targetPath);
                 scenario.attach(Files.readAllBytes(targetPath), "video/webm", "video");

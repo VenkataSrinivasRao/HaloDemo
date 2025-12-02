@@ -6,8 +6,8 @@
       <class name="com.parabank.tests.RunnerTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.parabank.tests.RunnerTest -->
     </classes>
