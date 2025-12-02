@@ -16,6 +16,7 @@ public class LandingPage {
 	private String username="[name='username']";
 	private String password="[name='password']";
 	private String loginBtn="[value='Log In']";
+	private String contactusLink="//a[normalize-space()='Contact Us']";
 	
 	public void enterUserName(String uname) {
 		functions.fill(username, uname);
@@ -28,4 +29,9 @@ public class LandingPage {
 	public void clickLoginButton() {
 		functions.click(loginBtn);
 	}
+	
+	public void clickContactUs () {
+		functions.click(contactusLink);
+	}
+	
 }
