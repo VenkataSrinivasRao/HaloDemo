@@ -72,7 +72,8 @@ public class LoginSteps {
 	}
 	@Then("user can see Thanks message")
 	public void user_can_see_thanks_message() {
-		customerCarePage.isThanksMessageDisplayed();
+		boolean isvisible=customerCarePage.isThanksMessageDisplayed();
+		Assert.assertTrue(isvisible);
 	    
 	}
 }
