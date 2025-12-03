@@ -17,6 +17,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+/**
+ * Step Definitions for login and customer care scenarios using
+ * Playwright + Cucumber + TestNG.
+ * 
+ * This class binds Gherkin steps with UI interactions using Page Object Model.
+ */
+
 public class LoginSteps {
 	
 	Page page;

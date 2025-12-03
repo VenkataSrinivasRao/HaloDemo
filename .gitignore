@@ -1,0 +1,80 @@
+# -----------------------------
+# Maven
+# -----------------------------
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# -----------------------------
+# IntelliJ / Eclipse / VS Code
+# -----------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+logs/
+
+# -----------------------------
+# OS Generated Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Playwright Specific
+# -----------------------------
+test-results/
+playwright-report/
+blob-report/
+trace.zip
+*.zip
+
+# Videos & Screenshots (Generated During Tests)
+target/videos/
+target/screenshots/
+
+# -----------------------------
+# Allure Reports
+# -----------------------------
+allure-results/
+allure-report/
+
+# -----------------------------
+# Cucumber Reports
+# -----------------------------
+cucumber-report/
+cucumber.json
+
+# -----------------------------
+# Java Build Artifacts
+# -----------------------------
+*.class
+*.jar
+*.war
+*.ear
+
+# -----------------------------
+# Temporary Files
+# -----------------------------
+*.tmp
+*.swp
+*.swo
+
+# -----------------------------
+# Environment & Config
+# -----------------------------
+*.env
+*.properties.local
+.env.*

@@ -10,6 +10,20 @@ import java.util.Date;
 
 public class Utilities {
 
+	/**
+	 * Retrieves a configuration value from the project's config.properties file.
+	 *
+	 * @param key the property key whose value needs to be fetched
+	 * @return the value associated with the provided key, or an empty string if the key is not found
+	 *
+	 * This method:
+	 *  - Loads the config.properties file from the project root directory
+	 *  - Reads all properties into a Properties object
+	 *  - Returns the value mapped to the provided key
+	 *
+	 * If any IOException occurs (e.g., file not found, read error),
+	 * it prints the stack trace and returns an empty string.
+	 */
 	public static Object getConfigProperty(String key) {
 		String data = "";
 		try {
